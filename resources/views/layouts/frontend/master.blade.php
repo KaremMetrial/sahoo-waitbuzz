@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 <head>
     @include('layouts.frontend.partials.head')
 </head>
-<body>
+<body dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 
 <!-- top bar -->
 @include('layouts.frontend.partials.topbar')

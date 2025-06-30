@@ -14,7 +14,7 @@
                 $table->id();
                 $table->enum('type', ['home1', 'home2']);
                 $table->string('btn_link');
-                $table->boolean('active')->default('true');
+                $table->boolean('active')->default(true);
                 $table->timestamps();
 
                 $table->index(['active', 'type']);

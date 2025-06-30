@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('key');
             $table->text('value');
+            $table->boolean('active')->default(true);
             $table->timestamps();
 
             $table->index('key');

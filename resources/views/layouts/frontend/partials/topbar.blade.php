@@ -4,22 +4,22 @@
         <!-- social links -->
         <ul class="social-links d-flex gap-md-3 gap-2">
             <li>
-                <a href="">
+                <a href="{{ $settings['youtube'] }}">
                     <img src="{{ asset('assets/frontend/images/youtube.svg') }}" class="social-icon" alt="youtube" />
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ $settings['facebook_link'] }}">
                     <img src="{{ asset('assets/frontend/images/facebook.svg') }}" class="social-icon" alt="facebook" />
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ $settings['instagram'] }}">
                     <img src="{{ asset('assets/frontend/images/instagram.svg') }}" class="social-icon" alt="instagram" />
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ $settings['tiktok'] }}">
                     <img src="{{ asset('assets/frontend/images/tiktok.svg') }}" class="social-icon" alt="tiktok" />
                 </a>
             </li>
@@ -27,15 +27,21 @@
 
         <!-- language -->
         <div class="language">
-            <a href="">
-                <img src="{{ asset('assets/frontend/images/kw-flag.svg') }}" alt="kw flag">
-                <span class="px-1">العربية</span>
-            </a>
-            <span class="px-2">|</span>
-            <a href="">
-                <img src="{{ asset('assets/frontend/images/us-flag.svg') }}" alt="us flag">
-                <span class="px-1">English (US)</span>
-            </a>
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                @php
+                    $flagImage = $localeCode === 'ar' ? 'kw-flag.svg' : 'us-flag.svg';
+                    $languageName = $localeCode === 'ar' ? 'العربية' : 'English (US)';
+                @endphp
+
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    <img src="{{ asset('assets/frontend/images/' . $flagImage) }}" alt="{{ $properties['native'] }} flag">
+                    <span class="px-1">{{ $languageName }}</span>
+                </a>
+
+                @if(!$loop->last)
+                    <span class="px-2">|</span>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>

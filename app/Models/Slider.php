@@ -7,6 +7,8 @@
     use Illuminate\Database\Eloquent\Attributes\Scope;
     use Illuminate\Database\Eloquent\Builder;
     use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Relations\HasMany;
+    use Illuminate\Database\Eloquent\Relations\MorphOne;
 
     class Slider extends Model implements TranslatableContract
     {
@@ -20,13 +22,22 @@
             'active'
         ];
         protected $casts = [
-            'active' => 'boolean'
+            'active' => 'boolean',
+            'type' => 'string',
         ];
-
         // Scope
         #[Scope]
         protected function active(Builder $query): void
         {
             $query->where('active', true);
+        }
+        // Relation
+        public function file(): MorphOne
+        {
+            return $this->morphOne(File::class, 'fileable');
+        }
+        public function translations():HasMany
+        {
+            return $this->hasMany(SliderTranslation::class);
         }
     }

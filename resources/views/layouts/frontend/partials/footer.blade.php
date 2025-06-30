@@ -7,38 +7,38 @@
             <div class="col-md-3 col-6">
                 <ul class="d-grid gap-3">
                     <li>
-                        <a href="/categories.html">الأقسام</a>
+                        <a href="/categories.html">{{ __('footer.categories') }}</a>
                     </li>
                     <li>
-                        <a href="/index.html">الرئيسية</a>
+                        <a href="/index.html">{{ __('footer.home') }}</a>
                     </li>
                     <li>
-                        <a href="/our-projects.html">أعمالنا</a>
+                        <a href="/our-projects.html">{{ __('footer.our_projects') }}</a>
                     </li>
                     <li>
-                        <a href="/about-us.html">من نحن</a>
+                        <a href="/about-us.html">{{ __('footer.about_us') }}</a>
                     </li>
                     <li>
-                        <a href="/contact-us.html">تواصل معنا</a>
+                        <a href="/contact-us.html">{{ __('footer.contact_us') }}</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-3 col-6">
                 <ul class="d-grid gap-3">
                     <li>
-                        <a href="">الشروط والأحكام</a>
+                        <a href="">{{ __('footer.terms') }}</a>
                     </li>
                     <li>
-                        <a href="/contact-us.html">اتصل  بنا</a>
+                        <a href="/contact-us.html">{{ __('footer.call_us') }}</a>
                     </li>
                     <li>
-                        <a href="">فروعنا</a>
+                        <a href="">{{ __('footer.branches') }}</a>
                     </li>
                     <li>
-                        <a href="/about-us.html">من نحن</a>
+                        <a href="/about-us.html">{{ __('footer.about_us') }}</a>
                     </li>
                     <li>
-                        <p>تابعنا</p>
+                        <p>{{ __('footer.follow_us') }}</p>
                         <ul class="social-links d-flex gap-3 mt-2">
                             <li>
                                 <a href="">
@@ -65,7 +65,7 @@
                 </ul>
             </div>
             <div class="col-md-3 col-12 payment">
-                <p class="fw-bold">طرق الدفع المتاحة</p>
+                <p class="fw-bold">{{ __('footer.payment_methods') }}</p>
                 <ul class="d-flex gap-3 mt-2">
                     <li>
                         <img src="{{ asset('assets/frontend/images/visa.svg') }}" alt="">
@@ -86,10 +86,10 @@
 <div class="copyrights">
     <div class="container">
         <div class="space-between">
-            <p>Copyright ©United House Trading</p>
+            <p>{{ __('footer.copyright') }}</p>
             <ul class="d-flex gap-3">
-                <li><a href="">سياسة الاستخدام</a></li>
-                <li><a href="">شروط الخدمة</a></li>
+                <li><a href="">{{ __('footer.usage_policy') }}</a></li>
+                <li><a href="">{{ __('footer.service_terms') }}</a></li>
             </ul>
         </div>
     </div>
@@ -97,8 +97,8 @@
 
 <!-- whatsapp -->
 <div class="whatsapp">
-    <a href="" class="whatsapp-button" >
-        <span class="tooltip">تواصل عبر واتساب</span>
+    <a href="https://api.whatsapp.com/send/?phone={{ $settings['whatsapp_number'] }}&text&type=phone_number&app_absent=0" class="whatsapp-button">
+        <span class="tooltip">{{ __('footer.whatsapp') }}</span>
         <img src="{{ asset('assets/frontend/images/whatsapp.svg') }}" alt="">
     </a>
 </div>
