@@ -1,16 +1,18 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container justify-content-between {{ app()->getLocale() === 'en' ? 'flex-row-reverse' : '' }}">
         <a class="navbar-brand" href="index.html">
-            <img src="{{ Storage::url($settings['logo']) }}" alt="logo" />
+            <img src="{{ Storage::url($settings['logo']) }}" alt="logo"/>
         </a>
-        <button class="nav-toggler d-lg-none d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems" >
+        <button class="nav-toggler d-lg-none d-block" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarItems">
             <ul class="navbar-nav gap-3 me-auto mb-2 mb-lg-0">
                 <li class="">
                     <form class="d-flex d-lg-none search-container m-0 mt-4" role="search">
-                        <input class="form-control" type="search" placeholder="{{ __('search_product') }}" aria-label="Search"/>
+                        <input class="form-control" type="search" placeholder="{{ __('search_product') }}"
+                               aria-label="Search"/>
                         <img src="{{ asset('assets/frontend/images/search.svg') }}" alt="search">
                     </form>
                 </li>
@@ -18,13 +20,16 @@
                     <a class="nav-link active" aria-current="page" href="#">{{ __('home') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="/categories.html">
+                    <a class="nav-link" href="{{ route('categories.index') ?? '#' }}">
                         {{ __('categories') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/products.html">{{ __('iron_desks') }}</a></li>
-                        <li><a class="dropdown-item" href="/product.html">{{ __('file_cabinets') }}</a></li>
-                        <li><a class="dropdown-item" href="/products.html">{{ __('tool_cabinets') }}</a></li>
+                        @php
+                            $categories = \App\Models\Category::active()->get();
+                        @endphp
+                        @foreach($categories as $category)
+                            <li><a class="dropdown-item" href="{{ route('categories.show', $category) }}">{{ $category->name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="nav-item">

@@ -3,6 +3,7 @@
     namespace App\Filament\Resources;
 
     use App\Filament\Resources\SliderResource\Pages;
+    use App\Filament\Resources\CategoryResource\RelationManagers;
     use App\Models\Slider;
     use Filament\Forms;
     use Filament\Forms\Form;

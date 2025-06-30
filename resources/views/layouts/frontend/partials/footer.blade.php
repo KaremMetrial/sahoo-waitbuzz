@@ -41,22 +41,22 @@
                         <p>{{ __('footer.follow_us') }}</p>
                         <ul class="social-links d-flex gap-3 mt-2">
                             <li>
-                                <a href="">
+                                <a href="{{ $settings['youtube'] }}">
                                     <img src="{{ asset('assets/frontend/images/youtube.svg') }}" class="social-icon" alt="youtube" />
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings['facebook_link'] }}">
                                     <img src="{{ asset('assets/frontend/images/facebook.svg') }}" class="social-icon" alt="facebook" />
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings['instagram'] }}">
                                     <img src="{{ asset('assets/frontend/images/instagram.svg') }}" class="social-icon" alt="instagram" />
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings['tiktok'] }}">
                                     <img src="{{ asset('assets/frontend/images/tiktok.svg') }}" class="social-icon" alt="tiktok" />
                                 </a>
                             </li>
