@@ -5,6 +5,7 @@ namespace App\Filament\Resources\TestimonialResource\Pages;
 use App\Filament\Resources\TestimonialResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use Illuminate\Support\Facades\Storage;
 
 class EditTestimonial extends EditRecord
 {

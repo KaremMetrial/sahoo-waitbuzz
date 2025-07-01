@@ -17,7 +17,7 @@
 
             $categories = Category::with('file')->active()->get();
 
-            $productFeatured = Product::with('file')->active()->featured()->limit(3)->get();
+            $productFeatured = Product::with('files')->active()->featured()->limit(3)->get();
 
             $clients = Client::with('file')->active()->get();
 

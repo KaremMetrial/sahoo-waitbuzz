@@ -12,12 +12,13 @@ class CreateProduct extends CreateRecord
     protected function afterCreate(): void
     {
         $data = $this->form->getState();
-        if (!empty($data['image'])) {
-            $this->record->file()->create([
-                'path' => $data['image'],
-            ]);
+        if (!empty($data['images']) && is_array($data['images'])) {
+            foreach ($data['images'] as $path) {
+                $this->record->files()->create(['path' => $path]);
+            }
         }
     }
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

@@ -8,14 +8,13 @@
     use Illuminate\Database\Eloquent\Builder;
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\Relations\HasMany;
-    use Illuminate\Database\Eloquent\Relations\MorphOne;
+    use Illuminate\Database\Eloquent\Relations\MorphMany;
     use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
     class Product extends Model implements TranslatableContract
     {
         use Translatable;
-
-        public $translatedAttributes = ['title', 'short_description', 'description'];
+        public $translatedAttributes = ['title', 'short_description', 'description', 'specifications','features'];
 
         protected $fillable = [
             'active',
@@ -30,9 +29,9 @@
 
         // Relation
 
-        public function file(): MorphOne
+        public function files(): MorphMany
         {
-            return $this->morphOne(File::class, 'fileable');
+            return $this->morphMany(File::class, 'fileable');
         }
 
         public function translations(): HasMany

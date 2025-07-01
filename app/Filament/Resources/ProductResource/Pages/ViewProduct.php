@@ -18,7 +18,7 @@ class ViewProduct extends ViewRecord
     }
     protected function mutateFormDataBeforeFill(array $data): array
     {
-        $data['image'] = $this->record->file?->path;
+        $data['images'] = $this->record->files->pluck('path')->toArray();
 
         return $data;
     }

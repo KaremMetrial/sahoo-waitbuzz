@@ -17,10 +17,10 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">{{ __('home') }}</a>
+                    <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" aria-current="page" href="{{ route('home') }}">{{ __('home') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('categories.index') ?? '#' }}">
+                    <a class="nav-link {{ request()->routeIs('categories.*') ? 'active' : '' }}" href="{{ route('categories.index') ?? '#' }}">
                         {{ __('categories') }}
                     </a>
                     <ul class="dropdown-menu">
@@ -33,7 +33,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/our-projects.html">{{ __('our_works') }}</a>
+                    <a class="nav-link {{ request()->routeIs('products.featured') ? 'active' : '' }}" href="{{  route('products.featured') }}">{{ __('our_works') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about-us.html">{{ __('about_us') }}</a>

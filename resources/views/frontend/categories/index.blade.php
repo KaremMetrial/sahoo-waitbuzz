@@ -24,7 +24,7 @@
                     <div class="col-md-3 col-6 mb-4">
                         <a href="{{ route('categories.show', $category) }}">
                             <div class="card">
-                                <img src="{{ Storage::url($category->file->path) }}" height="250" width="200" class="card-img-top">
+                                <img src="{{ Storage::url($category->file->path ?? '-') }}" height="250" width="200" class="card-img-top">
                                 <div class="card-body text-center p-3">
                                     <p>{{ $category->name }}</p>
                                 </div>

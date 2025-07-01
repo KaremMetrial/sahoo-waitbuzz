@@ -6,7 +6,7 @@
             @foreach($productFeatured as $product)
                 <div class="col-4">
                     <a href="/product.html">
-                        <img src="{{ Storage::url($product->file->path) }}" alt="">
+                        <img src="{{ Storage::url($product->files->first()->path ?? '-') }}" alt="">
                     </a>
                 </div>
             @endforeach

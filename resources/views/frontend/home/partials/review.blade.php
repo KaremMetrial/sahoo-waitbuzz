@@ -9,7 +9,7 @@
                         <div class="card">
                             <div class="d-flex gap-2">
                                 <div class="user-img">
-                                    <img src="{{ Storage::url($testimonial->file->path) }}" alt="">
+                                    <img src="{{ Storage::url($testimonial->file->path ?? '-') }}" alt="">
                                 </div>
                                 <div>
                                     <p class="name">{{ $testimonial->client_name }}</p>

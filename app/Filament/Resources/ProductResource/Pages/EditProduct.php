@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources\ProductResource\Pages;
 
-use App\Filament\Resources\ProductResource;
 use Filament\Actions;
+use Illuminate\Support\Facades\Storage;
 use Filament\Resources\Pages\EditRecord;
+use App\Filament\Resources\ProductResource;
 
 class EditProduct extends EditRecord
 {
@@ -20,21 +21,25 @@ class EditProduct extends EditRecord
     protected function afterSave(): void
     {
         $data = $this->form->getState();
-        if (!empty($data['image'])) {
-            $file = $this->record->file;
-            if ($file) {
-                $file->update(['path' => $data['image']]);
-            } else {
-                $this->record->file()->create(['path' => $data['image']]);
+
+        if (!empty($data['images']) && is_array($data['images'])) {
+            foreach ($this->record->files as $file) {
+                Storage::delete($file->path);
+                $file->delete();
+            }
+
+            foreach ($data['images'] as $path) {
+                $this->record->files()->create(['path' => $path]);
             }
         }
     }
     protected function mutateFormDataBeforeFill(array $data): array
     {
-        $data['image'] = $this->record->file?->path;
+        $data['images'] = $this->record->files->pluck('path')->toArray();
 
         return $data;
     }
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

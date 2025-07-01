@@ -6,7 +6,7 @@
             <div class="swiper-wrapper">
                 @foreach($clients as $client)
                     <div class="swiper-slide">
-                        <img src="{{ Storage::url($client->file->path) }}" />
+                        <img src="{{ Storage::url($client->file->path ?? '-') }}" />
                     </div>
                 @endforeach
             </div>
