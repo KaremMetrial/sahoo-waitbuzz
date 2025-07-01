@@ -73,10 +73,10 @@
                                 @endforeach
                             </div>
                             <div class="swiper-button-prev prev-review">
-                                <img src="images/arrow-up-double-sharp.svg" alt="">
+                                <img src="{{ asset('assets/frontend/images/arrow-up-double-sharp.svg') }}" alt="">
                             </div>
                             <div class="swiper-button-next next-review">
-                                <img src="images/arrow-up-double-sharp.svg" alt="">
+                                <img src="{{ asset('assets/frontend/images/arrow-up-double-sharp.svg') }}" alt="">
                             </div>
                         </div>
                     </div>

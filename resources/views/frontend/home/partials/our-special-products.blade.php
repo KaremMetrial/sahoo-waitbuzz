@@ -5,7 +5,7 @@
         <div class="row">
             @foreach($productFeatured as $product)
                 <div class="col-4">
-                    <a href="/product.html">
+                    <a href="{{ route('products.show', $product) }}">
                         <img src="{{ Storage::url($product->files->first()->path ?? '-') }}" alt="">
                     </a>
                 </div>

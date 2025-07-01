@@ -1,6 +1,7 @@
 <?php
 
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+    use App\Http\Controllers\ProjectController;
+    use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
     use App\Http\Controllers\CategoryController;
     use App\Http\Controllers\ContactController;
@@ -36,6 +37,17 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
                 Route::get('/{product}', 'show')->name('show');
             });
+
+            // Projects
+            Route::prefix('projects')->controller(ProjectController::class)->name('projects.')->group(function () {
+                Route::get('/', 'index')->name('index');
+            });
+
+            // who we are
+            Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
+
+            // contact us page
+            Route::get('/contact-us', [ContactController::class, 'contactUs'])->name('contact-us');
         }
     );
 

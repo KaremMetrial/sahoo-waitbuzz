@@ -11,7 +11,7 @@
                 <h2 class="fw-800 mb-4">{{ __('categories.header.title') }}</h2>
                 <p class="fw-bold mb-2">{{ __('categories.header.description') }}</p>
                 <p class="fw-800 mb-5">{{ __('categories.header.more_info') }}</p>
-                <a href="/contact-us.html" class="white-btn">{{ __('categories.header.contact_us') }}</a>
+                <a href="{{ route('contact-us') }}" class="white-btn">{{ __('categories.header.contact_us') }}</a>
             </div>
         </div>
     </div>

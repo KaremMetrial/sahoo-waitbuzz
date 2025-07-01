@@ -36,7 +36,7 @@
                     <a class="nav-link {{ request()->routeIs('products.featured') ? 'active' : '' }}" href="{{  route('products.featured') }}">{{ __('our_works') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about-us.html">{{ __('about_us') }}</a>
+                    <a class="nav-link {{ request()->routeIs('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}">{{ __('about_us') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact-us.html">{{ __('contact_us') }}</a>

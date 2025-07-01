@@ -25,4 +25,8 @@
 
             return view('frontend.home.index', compact('sliders', 'categories', 'productFeatured', 'clients', 'testimonials'));
         }
+        public function aboutUs(): View
+        {
+            return view('frontend.home.about-us');
+        }
     }

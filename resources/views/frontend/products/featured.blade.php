@@ -39,19 +39,18 @@
             <div class="container">
                 <div class="row py-5 align-items-center">
                     <div class="col-md-5">
-                        <h5 class="title">نصنع الجودة… ونُتقن التفاصيل</h5>
-                        <p>نحوّل الخامات إلى أنظمة تخزين، أثاث صناعي، وحلول هندسية تخدمك سنين.</p>
-                        <p>كل مشروع يبدأ بفكرة — وننهيه بتفاصيل متقنة من التصميم للتنفيذ.من أول قياس، لآخر برغي — شغلنا
-                            مدروس، وجودتنا ما تقبل التنازل.</p>
-                        <p class="fw-800">لا تكتفي بالأثاث العادي — اختر المتانة التي تستحقها.</p>
+                        <h5 class="title">{{ __('about_industry.title') }}</h5>
+                        <p>{{ __('about_industry.paragraph1') }}</p>
+                        <p>{{ __('about_industry.paragraph2') }}</p>
+                        <p class="fw-800">{{ __('about_industry.paragraph3') }}</p>
                         <div class="mt-4 d-flex gap-3">
-                            <a href="/contact-us.html" class="main-btn">تواصل مع فريقنا</a>
-                            <a href="#" class="border-btn">اطلب عرض مخصص</a>
+                            <a href="{{ route('contact-us') }}" class="main-btn">{{ __('about_industry.contact_team') }}</a>
+                            <a href="https://api.whatsapp.com/send/?phone={{ $settings['whatsapp_number'] }}&text&type=phone_number&app_absent=0" class="border-btn">{{ __('about_industry.request_quote') }}</a>
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="image">
-                            <img src="images/projects.png" alt="">
+                            <img src="{{ asset('assets/frontend/images/projects.png') }}" alt="">
                         </div>
                     </div>
                 </div>

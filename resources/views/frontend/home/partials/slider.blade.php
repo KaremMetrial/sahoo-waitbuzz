@@ -17,8 +17,8 @@
                                 <h2 class="fw-bold mb-3">{{ $slider->title ?? 'نصنع الجودة بخبرة كويتية في عالم الأثاث الحديدي' }}</h2>
                                 <p class="fw-bold">{{ $slider->descriptions ?? 'نقدم حلول أثاث معدني متكاملة للمكاتب، المنشآت الطبية، المستودعات، والمدارس.' }}</p>
                                 <div class="mt-4 d-flex gap-3">
-                                    <a class="main-btn" href="{{ $slider->btn_link ?? '/products.html' }}">شاهد المنتجات</a>
-                                    <a class="border-btn" href="/contact-us.html">تواصل معنا</a>
+                                    <a class="main-btn" href="{{ $slider->btn_link ?? route('categories.index') }}">شاهد المنتجات</a>
+                                    <a class="border-btn" href="{{ route('contact-us') }}">تواصل معنا</a>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3 mb-md-0 ">

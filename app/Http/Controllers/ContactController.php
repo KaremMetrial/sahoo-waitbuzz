@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -19,5 +20,8 @@ class ContactController extends Controller
         flash()->success( __('site.contact.success'));
         return redirect()->back();
     }
-
+    public function contactUs(): View
+    {
+        return view('frontend.home.contact-us');
+    }
 }

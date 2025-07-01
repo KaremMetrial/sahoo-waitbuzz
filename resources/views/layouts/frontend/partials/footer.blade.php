@@ -7,13 +7,13 @@
             <div class="col-md-3 col-6">
                 <ul class="d-grid gap-3">
                     <li>
-                        <a href="/categories.html">{{ __('footer.categories') }}</a>
+                        <a href="{{ route('categories.index') }}">{{ __('footer.categories') }}</a>
                     </li>
                     <li>
-                        <a href="/index.html">{{ __('footer.home') }}</a>
+                        <a href="{{ route('home') }}">{{ __('footer.home') }}</a>
                     </li>
                     <li>
-                        <a href="/our-projects.html">{{ __('footer.our_projects') }}</a>
+                        <a href="{{ route('projects.index') }}">{{ __('footer.our_projects') }}</a>
                     </li>
                     <li>
                         <a href="/about-us.html">{{ __('footer.about_us') }}</a>
