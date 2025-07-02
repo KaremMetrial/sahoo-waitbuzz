@@ -9,6 +9,5 @@
         protected $fillable = [
             'key',
             'value',
-            'active',
         ];
     }

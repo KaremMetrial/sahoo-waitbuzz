@@ -66,14 +66,7 @@ class SettingResource extends Resource
                             ->columnSpan(2)
                             ->hidden(fn ($get) => $get('key') === 'logo')
                             ->required(fn ($get) => $get('key') !== 'logo'),
-
-                        Forms\Components\Toggle::make('active')
-                            ->label(__('filament::resources.settings.active'))
-                            ->default(true)
-                            ->onColor('success')
-                            ->offColor('danger')
-                            ->inline(false)
-                            ->columnSpan(1),
+                      
                     ])
                     ->columns(4),
             ]);
@@ -99,14 +92,6 @@ class SettingResource extends Resource
                     ->searchable()
                     ->toggleable()
                     ->hidden(fn ($record) => $record?->key === 'logo'),
-
-                Tables\Columns\IconColumn::make('active')
-                    ->label(__('filament::resources.settings.active'))
-                    ->boolean()
-                    ->sortable()
-                    ->action(function ($record, Tables\Columns\IconColumn $column) {
-                        $record->update([$column->getName() => !$record->active]);
-                    }),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label(__('filament::resources.settings.created_at'))
