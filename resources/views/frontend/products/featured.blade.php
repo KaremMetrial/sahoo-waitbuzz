@@ -11,7 +11,7 @@
                 <h2 class="fw-800 mb-4">{{ __('projects.heading') }}</h2>
                 <p class="fw-bold">{{ __('projects.paragraph1') }}</p>
                 <p class="fw-bold mb-5">{{ __('projects.paragraph2') }}</p>
-                <a href="" class="white-btn">{{ __('projects.request_custom_offer') }}</a>
+                <a href="https://api.whatsapp.com/send/?phone={{ $settings['whatsapp_number'] }}&text&type=phone_number&app_absent=0" class="white-btn">{{ __('projects.request_custom_offer') }}</a>
             </div>
         </div>
     </div>

@@ -16,10 +16,7 @@
                         <a href="{{ route('projects.index') }}">{{ __('footer.our_projects') }}</a>
                     </li>
                     <li>
-                        <a href="/about-us.html">{{ __('footer.about_us') }}</a>
-                    </li>
-                    <li>
-                        <a href="/contact-us.html">{{ __('footer.contact_us') }}</a>
+                        <a href="{{ route('contact-us') }}">{{ __('footer.contact_us') }}</a>
                     </li>
                 </ul>
             </div>
@@ -29,13 +26,13 @@
                         <a href="">{{ __('footer.terms') }}</a>
                     </li>
                     <li>
-                        <a href="/contact-us.html">{{ __('footer.call_us') }}</a>
+                        <a href="{{ route('contact-us') }}">{{ __('footer.call_us') }}</a>
                     </li>
                     <li>
                         <a href="">{{ __('footer.branches') }}</a>
                     </li>
                     <li>
-                        <a href="/about-us.html">{{ __('footer.about_us') }}</a>
+                        <a href="{{ route('about-us') }}">{{ __('footer.about_us') }}</a>
                     </li>
                     <li>
                         <p>{{ __('footer.follow_us') }}</p>

@@ -18,7 +18,7 @@
     "footer.branches": "فروعنا",
     "footer.follow_us": "تابعنا",
     "footer.payment_methods": "طرق الدفع المتاحة",
-    "footer.copyright": "حقوق النشر ©United House Trading",
+    "footer.copyright": "حقوق النشر ©WaitBuzz",
     "footer.usage_policy": "سياسة الاستخدام",
     "footer.service_terms": "شروط الخدمة",
     "footer.whatsapp": "تواصل عبر واتساب",
@@ -288,6 +288,47 @@
     "home.why.paragraph2": "نُركز على تقديم حلول متكاملة تبدأ من التصميم العملي مرورًا بالتصنيع...",
     "home.why.paragraph3": "لا تكتفي بالأثاث العادي — اختر المتانة التي تستحقها.",
     "home.why.cta_contact": "تواصل معنا الأن",
-    "home.why.cta_view_categories": "عرض الأقسام"
+    "home.why.cta_view_categories": "عرض الأقسام",
 
+    "products.breadcrumb.index" : "المنتجات",
+
+        "filament::resources.settings.navigation_group": "الإعدادات",
+    "filament::resources.settings.navigation_label": "الإعدادات",
+    "filament::resources.settings.model_label": "إعداد",
+    "filament::resources.settings.plural_model_label": "الإعدادات",
+
+    "filament::resources.settings.key": "المفتاح",
+    "filament::resources.settings.value": "القيمة",
+    "filament::resources.settings.active": "نشط",
+    "filament::resources.settings.created_at": "تاريخ الإنشاء",
+    "filament::resources.settings.updated_at": "تاريخ التحديث",
+    "filament::resources.settings.active_status": "الحالة",
+    "filament::resources.settings.delete_selected": "حذف المحدد",
+    "filament::resources.settings.create_setting": "إنشاء إعداد",
+
+    "products.no_products_found": "لم يتم العثور على منتجات",
+
+    "dashboard.stats.active_categories": "الأقسام النشطة",
+    "dashboard.stats.active_categories_description": "إجمالي أقسام المنتجات النشطة",
+
+    "dashboard.stats.featured_products": "المنتجات المميزة",
+    "dashboard.stats.featured_products_description": "المنتجات المميزة المتاحة",
+
+    "dashboard.stats.total_products": "إجمالي المنتجات",
+    "dashboard.stats.total_products_description": "جميع المنتجات النشطة",
+
+    "dashboard.stats.active_sliders": "السلايدر النشط",
+    "dashboard.stats.active_sliders_description": "سلايدر الصفحة الرئيسية النشط",
+
+    "dashboard.sections.active_sliders": "السلايدر النشط",
+
+    "filament::resources.sliders.types.home1": "الرئيسية 1",
+    "filament::resources.sliders.types.home2": "الرئيسية 2",
+
+    "dashboard.sections.our_clients": "عملاؤنا",
+
+    "dashboard.sections.featured_products": "المنتجات المميزة",
+    "dashboard.sections.latest_products": "أحدث المنتجات",
+
+    "dashboard.sections.recent_testimonials": "آراء العملاء الأخيرة"
 }

@@ -32,6 +32,7 @@
 
             // Products
             Route::prefix('products')->controller(ProductController::class)->name('products.')->group(function () {
+                Route::get('/', 'index')->name('index');
                 // our project
                 Route::get('/our-featured-project', 'ourFeaturedProject')->name('featured');
 

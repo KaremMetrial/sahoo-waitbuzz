@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
             $switch
                 ->locales(['ar','en']);
         });
-
+        
+        Paginator::useBootstrapFive();
     }
 }

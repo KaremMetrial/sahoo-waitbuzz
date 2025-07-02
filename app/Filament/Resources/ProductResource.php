@@ -63,6 +63,7 @@ class ProductResource extends Resource
                                         Forms\Components\TextInput::make('code')
                                             ->label(__('filament::resources.products.code'))
                                             ->required()
+                                            ->unique(Product::class, 'code', ignoreRecord: true)
                                             ->maxLength(50)
                                             ->columnSpan(2),
 

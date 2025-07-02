@@ -9,7 +9,7 @@
                     <p>{{ __('leadership.description2') }}</p>
                     <p class="fw-800">{{ __('leadership.description3') }}</p>
                     <div class="mt-4 d-flex gap-3">
-                        <a href="https://api.whatsapp.com/send/?phone={{ $settings['whatsapp_number'] }}&text&type=phone_number&app_absent=0" class="main-btn">{{ __('contact_us') }}</a>
+                        <a href="{{ route('contact-us') }}" class="main-btn">{{ __('contact_us') }}</a>
                         <a href="{{ route('categories.index') }}" class="border-btn">{{ __('view_categories') }}</a>
                     </div>
                 </div>

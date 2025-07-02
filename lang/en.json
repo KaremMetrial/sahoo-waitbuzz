@@ -18,7 +18,7 @@
     "footer.branches": "Our Branches",
     "footer.follow_us": "Follow Us",
     "footer.payment_methods": "Available Payment Methods",
-    "footer.copyright": "Copyright ©United House Trading",
+    "footer.copyright": "Copyright ©WaitBuzz",
     "footer.usage_policy": "Usage Policy",
     "footer.service_terms": "Service Terms",
     "footer.whatsapp": "Contact via WhatsApp",
@@ -233,11 +233,11 @@
     "why_sahoo.contact_now": "Contact Us Now",
     "why_sahoo.view_categories": "View Categories",
     "products.code": "Product Code",
-        "projects.heading": "Our Projects Speak for Our Excellence",
+    "projects.heading": "Our Projects Speak for Our Excellence",
     "projects.paragraph1": "From precise design to perfect execution, we provide the best metal solutions tailored to your industrial and commercial needs.",
     "projects.paragraph2": "Watch our expertise transform into tangible results in every project.",
     "projects.request_custom_offer": "Request a Custom Quote",
-        "featured_projects.heading": "Projects We’re Proud Of — From Concept to Execution",
+    "featured_projects.heading": "Projects We’re Proud Of — From Concept to Execution",
     "featured_projects.description": "We present real examples of our projects in metal furniture and storage systems across Kuwait and beyond. Excellence in execution, commitment to delivery, and customer satisfaction are our top priorities.",
     "about_industry.title": "We Manufacture Quality… and Perfect the Details",
     "about_industry.paragraph1": "We turn raw materials into storage systems, industrial furniture, and engineered solutions that serve you for years.",
@@ -289,5 +289,48 @@
     "home.why.paragraph2": "We focus on end-to-end solutions — from practical design to precise manufacturing to on-time delivery...",
     "home.why.paragraph3": "Don’t settle for average furniture — choose the durability you deserve.",
     "home.why.cta_contact": "Contact Us Now",
-    "home.why.cta_view_categories": "Browse Categories"
+    "home.why.cta_view_categories": "Browse Categories",
+
+    "products.breadcrumb.index": "Products",
+
+    "filament::resources.settings.navigation_group": "Settings",
+    "filament::resources.settings.navigation_label": "Settings",
+    "filament::resources.settings.model_label": "Setting",
+    "filament::resources.settings.plural_model_label": "Settings",
+
+    "filament::resources.settings.key": "Key",
+    "filament::resources.settings.value": "Value",
+    "filament::resources.settings.active": "Active",
+    "filament::resources.settings.created_at": "Created At",
+    "filament::resources.settings.updated_at": "Updated At",
+    "filament::resources.settings.active_status": "Status",
+    "filament::resources.settings.delete_selected": "Delete Selected",
+    "filament::resources.settings.create_setting": "Create Setting",
+
+    "products.no_products_found": "No products found",
+
+    "dashboard.stats.active_categories": "Active Categories",
+    "dashboard.stats.active_categories_description": "Total active product categories",
+
+    "dashboard.stats.featured_products": "Featured Products",
+    "dashboard.stats.featured_products_description": "Featured products available",
+
+    "dashboard.stats.total_products": "Total Products",
+    "dashboard.stats.total_products_description": "All active products",
+
+    "dashboard.stats.active_sliders": "Active Sliders",
+    "dashboard.stats.active_sliders_description": "Active homepage sliders",
+
+    "dashboard.sections.active_sliders": "Active Sliders",
+
+    "filament::resources.sliders.types.home1": "Home 1",
+    "filament::resources.sliders.types.home2": "Home 2",
+
+    "dashboard.sections.our_clients": "Our Clients",
+
+    "dashboard.sections.featured_products": "Featured Products",
+
+    "dashboard.sections.latest_products": "Latest Products",
+
+    "dashboard.sections.recent_testimonials": "Recent Testimonials"
 }
